@@ -1,0 +1,20 @@
+ @use './colors' as *;
+
+
+$theme-light: (
+  heading: $heading,
+  text: $text,
+  background: $color-background-light,
+  );
+
+$theme-dark: (
+  heading: rgba(255, 255, 255, 0.95),
+  text: rgba(255, 255, 255, 0.7),
+  background: $color-background-dark
+);
+
+@mixin apply-theme($theme-map) {
+  --color-heading: #{map-get($theme-map, heading)};
+  --color-text: #{map-get($theme-map, text)};
+  --color-background: #{map-get($theme-map, background)};
+}
