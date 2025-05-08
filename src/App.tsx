@@ -1,11 +1,14 @@
+import { ThemeProvider as ContextThemeProvider } from './01/context/ThemeContext';
+import Home from './01/pages/Home';
 import './App.css'
 
-function App() {
 
+function App() {
+  
   return (
-    <>
-      <h1>TypeScript: React</h1>
-    </>
+    <ContextThemeProvider>
+      <Home/>
+    </ContextThemeProvider>
   )
 }
 

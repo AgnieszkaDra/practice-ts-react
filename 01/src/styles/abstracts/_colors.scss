@@ -1,12 +1,32 @@
+// @use "sass:color";
+
+
+
+// // ----------------------
+// // Colors
+// // ----------------------
+
+// $heading: rgba(30, 14, 98, 1);
+// $text: rgba(21, 20, 57, 0.4);
+// $grey: rgba(235, 234, 237, 1);
+
+
+// // ----------------------
+// // Background Colors
+// // ----------------------
+
+// $color-background-dark: rgb(237, 40, 106);
+// $color-background-light: rgb(242, 191, 220);
+
 @use "sass:color";
-
-
 
 // ----------------------
 // Colors
 // ----------------------
 
+
 $heading: rgba(30, 14, 98, 1);
+
 $text: rgba(21, 20, 57, 0.4);
 $grey: rgba(235, 234, 237, 1);
 
@@ -14,9 +34,10 @@ $grey: rgba(235, 234, 237, 1);
 // ----------------------
 // Background Colors
 // ----------------------
-
+$background: rgb(237, 40, 106);
 $color-background-dark: rgb(237, 40, 106);
 $color-background-light: rgb(242, 191, 220);
+
 
 
 

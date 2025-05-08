@@ -5,8 +5,6 @@ body {
   font-family: 'DM Sans', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  @include apply-theme($theme-light);
-  color: var(--color-white);
   background-color: var(--color-background);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,6 +14,10 @@ body {
 
 body[data-theme='dark'] {
   @include apply-theme($theme-dark);
+}
+
+body[data-theme='light'] {
+  @include apply-theme($theme-light);
 }
 
 
