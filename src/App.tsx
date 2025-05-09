@@ -1,14 +1,19 @@
-import { ThemeProvider as ContextThemeProvider } from './01/context/ThemeContext';
+import { ThemeProvider } from 'styled-components';
 import Home from './01/pages/Home';
+import { useSelector } from 'react-redux';
+import { RootState } from './01/store/store';
+import { darkTheme, lightTheme } from './01/styles/themes';
 import './App.css'
-
+import { GlobalStyle } from './01/styles/GlobalStyle';
 
 function App() {
-  
+  const theme = useSelector((state: RootState) => state.theme.theme);
+
   return (
-    <ContextThemeProvider>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <GlobalStyle />
       <Home/>
-    </ContextThemeProvider>
+    </ThemeProvider>
   )
 }
 

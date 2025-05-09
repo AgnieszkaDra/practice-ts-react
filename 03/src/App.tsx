@@ -3,8 +3,9 @@ import { lightTheme, darkTheme } from './styles/themes';
 import { GlobalStyle } from './styles/GlobalStyle';
 import { useSelector } from 'react-redux';
 import { RootState } from './store/store'; 
-import { RouterProvider } from 'react-router-dom';
+
 import router from './Router'
+import { RouterProvider } from 'react-router-dom';
 
 function App() {
 

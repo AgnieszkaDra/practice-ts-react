@@ -1,5 +1,8 @@
 import { DefaultTheme } from 'styled-components';
-import * as colors from './abstracts/_colors.scss';
+import themes2 from './abstracts/_themes.scss';
+
+
+
 import { ThemeType } from '../context/types';
 
 declare module 'styled-components' {
@@ -7,7 +10,7 @@ declare module 'styled-components' {
     body: string;
     heading: string;
     text: string;
-    background: string;
+    backgroundColor: string;
     toggleTheme: string;
   }
 }
@@ -16,7 +19,7 @@ export const lightTheme: DefaultTheme = {
   body: 'white',
   heading: '#333333',
   text: 'gray',
-  background: colors.background,
+  backgroundColor: 'rgb(220, 220, 220)',
   toggleTheme: 'rgb(34, 49, 209)',
 };
 
@@ -24,7 +27,7 @@ export const darkTheme: DefaultTheme = {
   body: 'white',
   heading: 'rgba(30, 14, 98, 1)',
   text: 'smoke',
-  background: colors.background, 
+  backgroundColor:'rgb(119, 118, 118)', 
   toggleTheme: 'rgb(248, 240, 21)',
 };
 

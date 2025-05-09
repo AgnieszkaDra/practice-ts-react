@@ -6,10 +6,9 @@ export const GlobalStyle = createGlobalStyle`
 
   :root {
     --font-base: 'DM Sans', sans-serif;
-
     --color-heading: ${({ theme }) => theme.heading};
     --color-text: ${({ theme }) => theme.text};
-    --color-background: ${({ theme }) => theme.background};
+    --color-background: ${({ theme }) => theme.backgroundColor};
   }
 
   *,

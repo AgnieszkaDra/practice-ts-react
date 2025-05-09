@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
-	background-color: ${({ theme }) => theme.background};
+	background-color: ${({ theme }) => theme.backgroundColor};
     height: 5rem;
 	display: flex;
 	align-items: center;
@@ -20,6 +20,7 @@ const ThemeToggler = styled.button`
 	font-size: 1.3rem;
 	margin-left: 0.5rem;
 	color: ${({ theme }) => theme.toggleTheme};
+	background-color: transparent;
 `;
 
 export {
