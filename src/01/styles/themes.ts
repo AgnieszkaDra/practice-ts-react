@@ -1,9 +1,7 @@
 import { DefaultTheme } from 'styled-components';
-import themes2 from './abstracts/_themes.scss';
 
+type ThemeType = 'light' | 'dark';
 
-
-import { ThemeType } from '../context/types';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
