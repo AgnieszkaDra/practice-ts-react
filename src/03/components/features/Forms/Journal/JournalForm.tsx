@@ -13,6 +13,7 @@ type FormValues = {
 const JournalForm = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { isTracking, secondsActive, charCount } = useSelector((state: RootState) => state.tracking);
+  console.log(charCount)
 
   const {
     register,
@@ -35,6 +36,7 @@ const JournalForm = () => {
   }, [isTracking, dispatch]);
 
   const handleFocus = () => {
+
     dispatch(startTracking());
   };
   
@@ -43,6 +45,7 @@ const JournalForm = () => {
   };
   
   const handleChange = () => {
+    alert('change')
     const content = getValues('content');
     console.log(content)
     dispatch(updateCharCount(content.length));

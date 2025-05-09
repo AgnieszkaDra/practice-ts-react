@@ -44,6 +44,7 @@ import { deleteEntry } from '../../store/slices/journalSlice';
 const Main = () => {
     const dispatch = useDispatch();
     const entries = useSelector((state: RootState) => state.journal.entries);
+    console.log(entries)
    
   
     const handleDelete = (id: string) => {
