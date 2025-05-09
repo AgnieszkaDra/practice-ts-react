@@ -2,7 +2,6 @@ import { DefaultTheme } from 'styled-components';
 
 type ThemeType = 'light' | 'dark';
 
-
 declare module 'styled-components' {
   export interface DefaultTheme {
     body: string;
