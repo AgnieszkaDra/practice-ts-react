@@ -13,8 +13,6 @@ type FormValues = {
 const JournalForm = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { isTracking, secondsActive, charCount } = useSelector((state: RootState) => state.tracking);
-  console.log(charCount)
-
   const {
     register,
     handleSubmit,
@@ -45,16 +43,13 @@ const JournalForm = () => {
   };
   
   const handleChange = () => {
-    alert('change')
     const content = getValues('content');
-    console.log(content)
     dispatch(updateCharCount(content.length));
   };
   
   const charsPerMinute = secondsActive > 0 ? Math.round((charCount / secondsActive) * 60) : 0;
 
   const onSubmit = async ({ content }: FormValues) => {
-    alert('submit')
     try {
       await dispatch(
         createJournalEntry({
